@@ -366,8 +366,6 @@ else
  * 1.WriteaC#Sharpprogramtocomputethesumof thetwonumericalvalues.
  If thetwovaluesarethesame,returntripletheirsum
 
-
-
 int num1 = Convert.ToInt32(Console.ReadLine());
 int num2 = Convert.ToInt32(Console.ReadLine());
 
@@ -487,8 +485,6 @@ else
  * WriteaC#Sharpprogramtocreateastringwhichis4copiesof the2front
  charactersofagivenstring. If thegivenstringlengthislessthan2returnthe
  originalstring.
-
-
 
 string input = Console.ReadLine();
 string newString = string.Empty;
@@ -752,3 +748,225 @@ else Console.WriteLine("0");
 
  */
 
+
+/*
+ * 
+ *  11. Write a C# Sharp program to sort a string array in ascending order.
+string input = (Console.ReadLine());
+
+List<char> list = new List<char>();
+for (int i = 0; i< input.Length; i++)
+{
+    list.Add(input[i]);
+}
+foreach(char c in list.Order())
+Console.WriteLine(c);
+
+*/
+
+
+/*
+ * 
+ *  12. Write a C# Sharp program to read a string through the keyboard and sort it
+ using bubble sort.
+
+
+using System.Collections.Generic;
+
+int count = Convert.ToInt32(Console.ReadLine());
+List<string> list = new List<string>();
+
+for (int i = 0; i < count; i++)
+{
+    list.Add(Console.ReadLine());
+}
+foreach (string s in list.Order())
+{
+  Console.WriteLine(s);
+}
+
+*/
+
+
+
+/*
+ *  13. Write a program in C# Sharp to extract a substring from a given string
+ without using the library function.
+ * 
+int startPos = Convert.ToInt32(Console.ReadLine());
+int countCut = Convert.ToInt32(Console.ReadLine());
+string str = Console.ReadLine();
+string newString = string.Empty;
+
+
+if ((startPos + countCut) < str.Length) {
+    for (int i = startPos; i < (startPos + countCut); i++)
+    {
+        newString += str[i];
+    }
+    Console.WriteLine(newString);
+}
+else
+{
+    Console.WriteLine($"the subString is greater than {str}");
+}
+ */
+
+
+/*
+ * 15. Write a C# Sharp program to read a sentence and replace lowercase
+ characters with uppercase and vice-versa.
+
+string str = Console.ReadLine();
+string newString = string.Empty;
+
+char[] listOfChar = str.ToCharArray();
+
+for (int i = 0; i < str.Length; i++)
+{
+    if (char.IsUpper(str[i]))
+    {
+        listOfChar[i] = char.ToLower(str[i]);
+    }else if (char.IsLower(str[i]))
+    {
+        listOfChar[i] = char.ToUpper(str[i]);
+    }
+}
+
+Console.WriteLine(listOfChar);
+ */
+
+
+/*
+ *  16 Write a program in C# Sharp to check the username and password.
+
+string username = Console.ReadLine();
+string password = Console.ReadLine();
+
+string nsername1 = "jinana";
+string password1 = "3737";
+
+
+if (username == nsername1 && password == password1)
+{
+    Console.WriteLine("Password entered successfully");
+}
+else
+{
+    Console.WriteLine("Password entered not success");
+}
+
+ */
+
+/*
+ * 
+ *  17. Write a program in C# Sharp to search for the position of a substring within
+ a string.
+
+
+string input = Console.ReadLine();
+string subString = Console.ReadLine();
+
+var postion = input.IndexOf(subString);
+Console.WriteLine($"{postion}");
+
+if ( postion == -1)
+{
+    Console.WriteLine($"NOT FOUND {subString} IN {input}");
+}
+*/
+
+
+/*
+ * 18. Write a C# Sharp program to check whether a character is an alphabet
+ and not and if so, check for the case.
+
+using System.Data.SqlTypes;
+
+char input = Convert.ToChar(Console.ReadLine());
+
+if (char.IsUpper(input))
+{
+    Console.WriteLine($"the {input} is UpperCase ");
+}
+else if (char.IsLower(input))
+{
+    Console.WriteLine($"the {input} is LowerCase ");
+}
+ */
+
+
+
+/*
+ * 19. Write a program in C# Sharp to find the number of times a substring
+ appears in a given string.
+
+string input = Console.ReadLine();
+string subString = Console.ReadLine();
+
+var count = input.Split(' ').Where(x=> x.Contains(subString)).Count();
+
+Console.WriteLine($"the times of {subString} is appeares in {input} is:  {count}");
+*/
+
+/*
+ *  20. Write a program in C# Sharp to insert a substring before the first
+ occurrence of a string.
+
+
+string input = Console.ReadLine();
+string postionString = Console.ReadLine();
+string newString = Console.ReadLine();
+
+var postion = input.IndexOf(postionString);
+
+
+if (postion == -1)
+{
+    Console.WriteLine($"NOT FOUND {postionString} IN {input}");
+}
+else
+{
+    string result = string.Empty;
+
+  for (int i = 0; i < input.Length; i++)
+    {
+        if (i == postion)
+        {
+            result += $"{newString} ";
+        }
+        else
+        {
+            result += input[i];
+        }
+    }
+
+    Console.WriteLine($"{result}");
+}
+*/
+
+
+
+/*
+ * 
+ *  21. Write a C# Sharp program to compare (less than, greater than, equal to)
+ two substrings
+
+
+string input1 = Console.ReadLine();
+string input2 = Console.ReadLine();
+
+if (input1.Length > input2.Length)
+{
+    Console.WriteLine($"Substring '{input1}' in 'computer' is greater than substring '{input2}' in 'system'.");
+}
+else if (input1.Length < input2.Length)
+{
+    Console.WriteLine($"Substring '{input2}' in 'computer' is greater than substring '{input1}' in 'system'.");
+}
+else
+{
+    Console.WriteLine($"Substring '{input2}' in 'computer' is  equal to substring '{input1}' in 'system'.");
+}
+
+*/
